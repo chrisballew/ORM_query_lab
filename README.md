@@ -1,1 +1,1 @@
-# ORM_query_lab
+# querying-lab
