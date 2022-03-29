@@ -144,9 +144,16 @@ SELECT `school_db_instructor`.`id`,
 # (Do not hard code his name in the print)
 def problem_three(request):
 
+  
+  instructors = Instructor.objects.filter(id=2)
+  for instructor in instructors:
+    print(f'Full Name: {instructor.first_name} {instructor.last_name}')
 
+  courses = Course.objects.filter(instructor_id=2)
+  for course in courses:
+    print(f'Courses: {course.name}')
 
-    return complete(request)
+  return complete(request)
 
 
 # Supporting Query Method Documentation:
